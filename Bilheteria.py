@@ -46,8 +46,8 @@ if total_def < 120.00:
 
 print(f'\nO total da compra dividido entre {pessoas} pessoas é R${total_def:.2f}\n')
 print('\n=============== RECIBO ===============')
-print(ticket_comp,' Ingressos    = ',total_ticket)
-print(pipoca_comp,' Pipocas      = ',total_pipoca)
-print(refri_comp,' Refrigerantes = ',total_refri)
+print(ticket_comp,f' Ingressos     = R${total_ticket:.2f}')
+print(pipoca_comp,f' Pipocas       = R${total_pipoca:.2f}')
+print(refri_comp,f' Refrigerantes = R${total_refri:.2f}')
 print(f'\nTotal = R${total_taxa:.2f}')
 print('\nSua compra foi Finalizada!')
