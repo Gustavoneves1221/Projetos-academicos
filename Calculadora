@@ -1,0 +1,32 @@
+a, b = 0, 0
+def soma(a, b):
+    return a + b
+def minus(a, b):
+    return a - b
+def mult(a, b):
+    return a * b
+def div(a, b):
+    return a / b
+
+oper = input("\n [1]somar\n [2]subtrair\n [3]multiplicar\n [4]dividir\n [5]sair\n: ")
+'''while True:
+    if oper != '1' or oper != '2' or oper != '3' or oper != '4':
+        print ("\noperação invalida, insira um dos valores apresentados.")
+        oper = input("\n [1]somar\n [2]subtrair\n [3]multiplicar\n [4]dividir\n [5]sair\n: ")
+    else:
+        break'''
+
+n1 = int(input("Defina n1: "))
+n2 = int(input("Defina n2: "))
+
+if oper == '1':
+    print(soma(n1, n2))
+elif oper == '2':
+    print(minus(n1, n2))
+elif oper == '3':
+    print(mult(n1, n2))
+elif oper == '4':
+    print(div(n1, n2))
+else:
+    print('Calculadora finalizada.')
+
