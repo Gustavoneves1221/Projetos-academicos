@@ -8,25 +8,29 @@ def mult(a, b):
 def div(a, b):
     return a / b
 
-oper = input("\n [1]somar\n [2]subtrair\n [3]multiplicar\n [4]dividir\n [5]sair\n: ")
-'''while True:
-    if oper != '1' or oper != '2' or oper != '3' or oper != '4':
+menu = ("\n [1]somar\n [2]subtrair\n [3]multiplicar\n [4]dividir\n [5]sair\n: ")
+oper = input(menu)
+while True:
+    if oper not in ['1', '2', '3', '4', '5']:
         print ("\noperação invalida, insira um dos valores apresentados.")
-        oper = input("\n [1]somar\n [2]subtrair\n [3]multiplicar\n [4]dividir\n [5]sair\n: ")
+        oper = input(menu)
     else:
-        break'''
+        break
 
-n1 = int(input("Defina n1: "))
-n2 = int(input("Defina n2: "))
+if oper == '5':
+    print('Calculadora finalizada.')
+else:
+    n1 = int(input("Defina n1: "))
+    n2 = int(input("Defina n2: "))
 
 if oper == '1':
-    print(soma(n1, n2))
+    print(f"Resultado: {soma(n1, n2)}")
 elif oper == '2':
-    print(minus(n1, n2))
+    print(f"Resultado: {minus(n1, n2)}")
 elif oper == '3':
-    print(mult(n1, n2))
+    print(f"Resultado: {mult(n1, n2)}")
 elif oper == '4':
-    print(div(n1, n2))
-else:
-    print('Calculadora finalizada.')
-
+    if n2 == 0:
+        print("Não é possível dividir por 0!")
+    else:
+        print(f"Resultado: {div(n1, n2)}")
