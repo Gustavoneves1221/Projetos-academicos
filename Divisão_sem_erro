@@ -1,0 +1,21 @@
+def division (a, b):
+    return a / b
+while True:
+    try:
+        dividendo = int(input("\nDefina o dividendo: "))
+        divisor = int(input("Defina o divisor: "))
+
+        resultado = division(dividendo, divisor)
+        if dividendo == 0:
+                    print("O dividendo não pode ser zero. Por favor, insira um valor diferente de zero.")
+                    continue 
+
+        break
+    
+    except ZeroDivisionError:
+            print("Não é possível dividir por 0! Por favor, insira um divisor diferente de zero.")
+
+    except ValueError:
+        print("Por favor, insira um número inteiro válido.")
+    
+print(f"\nResultado: {resultado}\n")
